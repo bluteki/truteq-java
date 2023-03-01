@@ -1,0 +1,18 @@
+name: TruTeq Unittest
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setting up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Unit testing with junit on Maven
+        # run: mvn --batch-mode --update-snapshots package
+        run: test --file pom.xml
