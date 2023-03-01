@@ -14,5 +14,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Unit testing with junit on Maven
-        # run: mvn --batch-mode --update-snapshots package
-        run: test --file pom.xml
+        run: mvn --batch-mode --update-snapshots package
+        # run: test --file pom.xml
